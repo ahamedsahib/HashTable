@@ -31,7 +31,17 @@ namespace HashTable
                     map.Add(arr[i], 1);
                 }
             }
+            Console.WriteLine("Enter the string you want to remove");
+            string remove = Console.ReadLine().ToLower();
+            //printing values with frequency
+            foreach (var i in set)
+            {
+                Console.WriteLine($"{i}---> {map.Get(i)}");
+            }
+            map.Remove(remove);
 
+            Console.WriteLine("\n After Deletion \n");
+            
             //printing values with frequency
             foreach (var i in set)
             {
